@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Marim/OneDrive/Escritorio/Luis/Titanic/ML_Titanic_artifacts/c4889460b52740899754000c1b0ee70c/artifacts
+end_time: 1716483604058
+entry_point_name: ''
+experiment_id: '405463225829226435'
+lifecycle_stage: active
+run_id: c4889460b52740899754000c1b0ee70c
+run_name: testing
+run_uuid: c4889460b52740899754000c1b0ee70c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716483600471
+status: 3
+tags: []
+user_id: Marim

@@ -1,0 +1,2 @@
+[console_scripts]
+titanic_ml_project = src.train_eval:main

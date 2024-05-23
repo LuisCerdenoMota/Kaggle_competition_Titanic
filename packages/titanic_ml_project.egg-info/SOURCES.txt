@@ -1,0 +1,7 @@
+setup.py
+titanic_ml_project.egg-info/PKG-INFO
+titanic_ml_project.egg-info/SOURCES.txt
+titanic_ml_project.egg-info/dependency_links.txt
+titanic_ml_project.egg-info/entry_points.txt
+titanic_ml_project.egg-info/requires.txt
+titanic_ml_project.egg-info/top_level.txt
