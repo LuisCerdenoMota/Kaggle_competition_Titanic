@@ -194,8 +194,8 @@ class MLTraining:
             list_fprs.append(test_fpr)
             list_tprs.append(test_tpr)
 
-            dict_probatilities[f'fold_{fold}_prob_0'] = predictor.predict_proba(x_test)[:, 0]
-            dict_probatilities[f'fold_{fold}_prob_1'] = predictor.predict_proba(x_test)[:, 1]
+            dict_probatilities[f'Fold_{fold}_Prob_0'] = predictor.predict_proba(x_test)[:, 0]
+            dict_probatilities[f'Fold_{fold}_Prob_1'] = predictor.predict_proba(x_test)[:, 1]
             df_fea_importances.iloc[:, fold - 1] = predictor.feature_importances_
 
             oob += predictor.oob_score_ / self.n_splits
@@ -279,14 +279,14 @@ class ModelEvaluation:
 
         plt.savefig('ROC_curves_between_folds.png')
 
-    def save_into_mlflow(self, true_accurate):
+    def save_into_mlflow(self, true_accurate, exp_name, run_name):
         all_png_images = [x for x in os.listdir(os.getcwd()) if x.endswith('.png')]
         # Create an experiment if it's not exists
-        experiment_id = create_mlflow_experiment(experiment_name="ML Titanic",
+        experiment_id = create_mlflow_experiment(experiment_name=exp_name,
                                                  artifact_location="ML_Titanic_artifacts",
                                                  tags={"env": "dev", "version": "1.0.0"})
         # Save data and model in ML flow:
-        with mlflow.start_run(run_name='RandomForest with feature engineering', experiment_id=experiment_id) as run:
+        with mlflow.start_run(run_name=run_name, experiment_id=experiment_id) as run:
             metrics = {
                 "Average OOB score": self.oob_score,
                 "True Accurate": true_accurate

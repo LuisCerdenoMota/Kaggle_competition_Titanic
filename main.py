@@ -73,4 +73,7 @@ if __name__ == "__main__":
     true_accurate = obtain_true_accuracy(df_submission)
     print(f"The accuracy of the model in kaggle will be: {true_accurate}")
 
-    model_evaluate_class.save_into_mlflow(true_accurate)
+    # if you want to create another run into the same experiment, keep the same experiment name:
+    experiment_name = 'ML Titanic'
+    run_name = 'RandomForest with feature engineering'
+    # model_evaluate_class.save_into_mlflow(true_accurate, exp_name=experiment_name, run_name=run_name)
