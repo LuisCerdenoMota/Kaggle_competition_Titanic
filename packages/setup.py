@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 # 2: Go to packages folder and use 'python -m build'.
 
 # To install the project:
-# 1: Go to dist folder and ucdse 'pip install titanic_ml_project-0.1-py3-none-any.whl --force-reinstall'.
+# 1: Go to dist folder and use 'pip install titanic_ml_project-0.1-py3-none-any.whl --force-reinstall'.
 
 setup(
     name='titanic_ml_project',
@@ -18,7 +18,10 @@ setup(
         'pandas',
         'numpy',
         'scikit-learn',
-        'mlflow'
+        'mlflow',
+        'lightgbm',
+        'seaborn',
+        'openpyxl'
     ],
     entry_points={
         'console_scripts': [

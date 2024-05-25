@@ -1,14 +1,7 @@
 import mlflow
-from typing import Any
-
-import pandas as pd
-
-from sklearn.datasets import make_classification
 
 
-def create_mlflow_experiment(
-    experiment_name: str, artifact_location: str, tags: dict[str, Any]
-) -> str:
+def create_mlflow_experiment(experiment_name, artifact_location, tags):
     """
     Create a new mlflow experiment with the given name and artifact location.
 
@@ -39,9 +32,7 @@ def create_mlflow_experiment(
     return experiment_id
 
 
-def get_mlflow_experiment(
-    experiment_id: str = None, experiment_name: str = None
-) -> mlflow.entities.Experiment:
+def get_mlflow_experiment(experiment_id=None, experiment_name=None):
     """
     Retrieve the mlflow experiment with the given id or name.
 
@@ -66,9 +57,7 @@ def get_mlflow_experiment(
     return experiment
 
 
-def delete_mlflow_experiment(
-    experiment_id: str = None, experiment_name: str = None
-) -> None:
+def delete_mlflow_experiment(experiment_id=None, experiment_name=None):
     """
     Delete the mlflow experiment with the given id or name.
 
