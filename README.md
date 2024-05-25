@@ -18,6 +18,8 @@ Learning with the Titanic dataset, the script allows you to make:
 5. Store models, params, metrics and artifacts in ML flow.
 
 ## Usefull tutorials:
-https://www.kaggle.com/code/alexisbcook/titanic-tutorial
-https://www.kaggle.com/code/gunesevitan/titanic-advanced-feature-engineering-tutorial
-https://www.kaggle.com/code/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy
+* To start: https://www.kaggle.com/code/alexisbcook/titanic-tutorial
+* For advance feature engineering: https://www.kaggle.com/code/gunesevitan/titanic-advanced-feature-engineering-tutorial
+* To train the best model: https://www.kaggle.com/code/ldfreeman3/a-data-science-framework-to-achieve-99-accuracy
+
+## Score: 0.80622

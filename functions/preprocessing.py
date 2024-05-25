@@ -23,7 +23,6 @@ def extract_surname(data):
             name_no_bracket = name
 
         family = name_no_bracket.split(',')[0]
-        title = name_no_bracket.split(',')[1].strip().split(' ')[0]
 
         for c in string.punctuation:
             family = family.replace(c, '').strip()
@@ -125,6 +124,13 @@ def feature_engineering(df):
                   4: 'Small', 5: 'Medium', 6: 'Medium',
                   7: 'Large', 8: 'Large', 11: 'Large'}
     df['family_size_grouped'] = df['family_size'].map(family_map)
+
+    """
+    # Create another variable to know if the passenger is alone:
+    df['alone_flag'] = 1
+    df.loc[df['family_size'] > 1, 'alone_flag'] = 0
+    """
+
     df['family'] = extract_surname(df['Name'])
 
     # We need Survived target, then, we cant continue with df, and we need to split it.
